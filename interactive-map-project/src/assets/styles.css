@@ -1,0 +1,202 @@
+/* ✅ Make the Map Full-Screen */
+html, body, #mapView {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* ✅ Style the Map Controls */
+.map-controls {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    gap: 8px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Buttons - General Style */
+button {
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: all 1s ease-in-out;
+}
+
+/* ✅ Increase icon size inside buttons */
+button i {
+    font-size: 1.4rem;
+    transition: all 1s ease-in-out;
+}
+
+/* ✅ Primary Button (Reset) */
+.btn-primary {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    width: 80px;
+    border-color: black;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+}
+
+/* ✅ Secondary Button (Toggle Markers) */
+.btn-secondary {
+    background-color: #ffffff;
+    color: black;
+    width: 80px;
+    border-color: black;
+}
+
+.btn-secondary:hover {
+    background-color: #333;
+}
+
+/* ✅ Dark Mode Toggle Button */
+.btn-dark {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    width: 80px;
+}
+
+.btn-dark:hover {
+    background-color: #333;
+}
+
+/* ✅ Input Field (Search Box) */
+#searchBox {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    font-size: 14px;
+    border-color: rgb(0, 0, 0);
+}
+
+/* ✅ Zoom Buttons Styling */
+.zoom-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.zoom-btn {
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-color: black;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.zoom-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* ✅ Custom Floating Popup Box */
+.custom-popup {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    display: none;
+    z-index: 1000;
+    width: auto;
+    height: auto;
+    max-width: 60vw;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* ✅ Hide pointer events when popup is hidden */
+.custom-popup:not([style*="display: block"]) {
+    pointer-events: none;
+}
+
+/* ✅ Popup Close Button */
+.close-popup {
+    background: none;
+    border: none;
+    font-size: 16px;
+    float: right;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-popup:hover {
+    color: #d9534f;
+}
+
+/* ✅ Dark Mode Styling */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* ✅ Change Map Controls in Dark Mode */
+.dark-mode .map-controls,
+.dark-mode .zoom-btn,
+.dark-mode button {
+    background: rgba(50, 50, 50, 0.9);
+    color: white;
+}
+
+/* ✅ Improve Button Accessibility */
+button:focus-visible {
+    outline: 2px solid #007bff;
+}
+
+/* ✅ Ensure Popups Adapt in Dark Mode */
+.dark-mode .custom-popup {
+    background: rgba(50, 50, 50, 0.9);
+    color: white !important;
+    border: 1px solid #ffffff;
+}
+.p{
+    margin-bottom: 0
+    ;
+}
+
+/* ✅ Responsive Styles (Merged) */
+@media (max-width: 640px) {
+    .map-controls {
+        width: 95%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #searchBox {
+        width: 100%;
+        max-width: none;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .zoom-btn {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    .custom-popup {
+        max-width: 90vw;
+        padding: 8px;
+    }
+}

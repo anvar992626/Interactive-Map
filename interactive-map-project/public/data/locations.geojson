@@ -1,0 +1,15 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-74.006, 40.7128] }, "properties": { "name": "New York City", "description": "Largest city in the USA" }},
+        { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-118.2437, 34.0522] }, "properties": { "name": "Los Angeles", "description": "City of Angels" }},
+        { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-87.6298, 41.8781] }, "properties": { "name": "Chicago", "description": "The Windy City" }},
+        { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-95.3698, 29.7604] }, "properties": { "name": "Houston", "description": "Space City" }},
+        { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-122.3321, 47.6062] }, "properties": { "name": "Seattle", "description": "Emerald City" }},
+        { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-71.0589, 42.3601] }, "properties": { "name": "Boston", "description": "Historic city" }},
+        { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-104.9903, 39.7392] }, "properties": { "name": "Denver", "description": "Mile High City" }},
+        { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-112.074, 33.4484] }, "properties": { "name": "Phoenix", "description": "Valley of the Sun" }},
+        { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-77.0369, 38.9072] }, "properties": { "name": "Washington D.C.", "description": "Capital of the USA" }},
+        { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-80.1918, 25.7617] }, "properties": { "name": "Miami", "description": "Magic City" }}
+    ]
+}
